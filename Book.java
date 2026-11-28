@@ -6,7 +6,7 @@ public class Book{
     protected Scanner scanner;
     private ArrayList<Tag>tags;
     private ArrayList<Ingredient>ingredients;
-    private ArrayList<Recipe>RecipeBook;
+    private static ArrayList<Recipe>RecipeBook;
     public Book(String title, String detail){
         scanner = new Scanner(System.in);
         this.title = title;
@@ -75,9 +75,9 @@ public class Book{
         }
         System.out.println("Please add the existing Ingredient");
         String nameIngredient = scanner.nextLine();
-        
-        
     }
-     
-
+    public static ArrayList<Recipe> getRecipes(){
+        return RecipeBook;
+    }
+        
 }
